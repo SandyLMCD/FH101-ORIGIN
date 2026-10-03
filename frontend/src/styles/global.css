@@ -1,0 +1,23 @@
+/* Design tokens and base styles (from the prototype) */
+:root{--ink-900:#04070F;--ink-800:#080D1A;--ink-700:#0C1424;--ink-600:#111C33;--line:#1C2A45;--line-soft:rgba(255,255,255,0.06);--azure-600:#1A5FE0;--azure-500:#2E7BFF;--azure-400:#5B9BFF;--glow:#9FD2FF;--text-hi:#F2F6FF;--text-mid:#A6B4CF;--text-low:#67789A;--ok:#3FCB8E;--wait:#F2B441;--stop:#FF6B6B;--proc:#5B9BFF;--paper:#FBFBFC;--paper-edge:#E4E7EC;--paper-ink:#14181F}
+html,body{margin:0;padding:0;background:var(--ink-900);color:var(--text-mid);font-family:Inter,sans-serif}
+*{box-sizing:border-box}
+a{color:var(--azure-400);text-decoration:none}a:hover{color:var(--glow);text-decoration:underline}
+input::placeholder,textarea::placeholder{color:var(--text-low)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,a:focus-visible{outline:none;box-shadow:0 0 0 2px var(--ink-900),0 0 0 4px var(--azure-500)}
+@keyframes ocrbar{0%{left:-30%}100%{left:100%}}
+[data-theme="dark"]{--ink-900:#04070F;--ink-800:#080D1A;--ink-700:#0C1424;--ink-600:#111C33;--line:#1C2A45;--line-soft:rgba(255,255,255,0.06);--text-hi:#F2F6FF;--text-mid:#A6B4CF;--text-low:#67789A}
+[data-theme="light"]{--ink-900:#F3F5FA;--ink-800:#FFFFFF;--ink-700:#FFFFFF;--ink-600:#E9EEF8;--line:#D8DFEC;--line-soft:rgba(12,20,40,0.07);--text-hi:#10182B;--text-mid:#3E4C68;--text-low:#67789A}
+@media (max-width:760px){[data-sidebar]{position:static !important;width:auto !important;flex-direction:row !important;align-items:center !important;flex-wrap:wrap !important;gap:8px !important;padding:10px 12px !important;border-right:none !important;border-bottom:1px solid var(--line)}[data-sidenav]{flex-direction:row !important;overflow-x:auto}[data-main]{padding-left:0 !important}}
+@media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+/* Hover states generated from the prototype's style-hover attributes */
+.hv-1:hover{background:var(--azure-600)}
+.hv-2:hover{background:var(--ink-600)}
+.hv-3:hover{text-decoration:underline}
+.hv-4:hover{border-color:var(--text-low)}
+.hv-5:hover{color:var(--text-hi)}
+.hv-6:hover{color:var(--azure-400)}
+.hv-7:hover{color:var(--stop)}
+.hv-8:hover{border-color:var(--stop);color:var(--stop)}
+.hv-9:hover{background:rgba(255,107,107,0.08)}
